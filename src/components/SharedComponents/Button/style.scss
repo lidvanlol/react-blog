@@ -1,0 +1,14 @@
+@import "../../styles/colors.scss";
+
+.Button {
+  width: 90px;
+  line-height: 1;
+  line-height: 26px;
+  box-sizing: border-box;
+  background-color: $black-color;
+  color: $white-color;
+  border: none;
+  &:focus {
+    outline: none;
+  }
+}

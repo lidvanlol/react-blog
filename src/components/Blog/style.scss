@@ -1,0 +1,267 @@
+@import "../styles/colors.scss";
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+  img {
+    order: 1;
+    @media (max-width: 768px) {
+      order: 3;
+    }
+  }
+}
+
+.Blog {
+  margin: 70px 0 220px 0;
+  @media (max-width: 768px) {
+    margin-bottom: 45px;
+  }
+}
+
+.BlogPost {
+  border: 1px solid $black-color;
+  padding: 13px 13px 13px 30px;
+  margin-bottom: 21px;
+  &:nth-child(odd) {
+    background: $gray-bg;
+  }
+  &:nth-child(even) {
+    background: transparent;
+  }
+  &:nth-last-of-type(1) {
+    margin-bottom: 0;
+  }
+}
+
+.main_content {
+  display: flex;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.post_box {
+  @media (min-width: 768px) {
+    margin-left: 23px;
+    flex-grow: 1;
+  }
+}
+
+.top_top {
+  align-self: flex-start;
+  margin-right: auto;
+  margin-left: 8px;
+  order: 2;
+  @media (max-width: 768px) {
+    margin-left: 0;
+  }
+  h2 {
+    margin: 6px 0 0 0;
+  }
+}
+
+.break {
+  flex-basis: 100%;
+  height: 0;
+  order: 4;
+}
+
+.top_right {
+  order: 3;
+  @media (max-width: 768px) {
+    display: flex;
+    order: 6;
+    margin-bottom: 10px;
+    margin-top: 0;
+  }
+  @media (max-width: 924px) {
+    margin-top: 10px;
+  }
+  button {
+    width: 90px;
+    line-height: 1;
+    line-height: 26px;
+    box-sizing: border-box;
+    background-color: $black-color;
+    color: $white-color;
+    margin: 0;
+    &:nth-of-type(1) {
+      margin-right: 25px;
+    }
+  }
+}
+
+.top_midle {
+  padding: 6px 0 26px;
+  order: 6;
+}
+
+.bottom {
+  text-align: center;
+  img {
+    margin-right: 8px;
+  }
+}
+
+// =================  Kendo Modal needed styles
+body {
+  position: relative;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+my-app {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  min-height: 80px;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+@keyframes k-loading-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.k-i-loading.k-example-loading {
+  font-size: 64px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(63, 81, 181);
+}
+
+.k-i-loading.k-example-loading::before,
+.k-i-loading.k-example-loading::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  content: "";
+  box-sizing: inherit;
+  border-radius: 50%;
+  border-width: 0.05em;
+  border-style: solid;
+  border-color: currentColor;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  background-color: transparent;
+}
+.k-icon.k-i-loading.k-example-loading::before,
+.k-icon.k-i-loading::after {
+  content: "";
+}
+
+.k-i-loading.k-example-loading::before {
+  margin-top: -0.5em;
+  margin-left: -0.5em;
+  width: 1em;
+  height: 1em;
+  animation: k-loading-animation 0.7s linear infinite;
+}
+
+.k-i-loading.k-example-loading::after {
+  margin-top: -0.25em;
+  margin-left: -0.25em;
+  width: 0.5em;
+  height: 0.5em;
+  animation: k-loading-animation reverse 1.4s linear infinite;
+}
+
+.k-window.k-widget {
+  min-width: 703px !important;
+  max-width: 100% !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  border-radius: 0;
+  border: 1px solid black;
+  position: fixed;
+  @media (max-width: 768px) {
+    min-width: auto !important;
+    max-width: 95% !important;
+  }
+}
+
+.kk-textbox {
+  width: 503px;
+  border: 1px solid black;
+  margin-left: 10px;
+  &:focus {
+    outline: none;
+  }
+}
+
+.kk-textarea {
+  width: 503px;
+  height: 150px;
+  margin-left: 10px;
+  border: 1px solid black;
+  &:focus {
+    outline: none;
+  }
+}
+
+.k-window-titlebar {
+  padding: 0 10px;
+  height: 26px;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  background-color: $gray-bg;
+  margin-bottom: 48px;
+  .k-window-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .k-window-title {
+    font-size: 14px;
+  }
+  .k-button-icon {
+    padding: 0;
+    max-height: 25px;
+    margin: 0;
+  }
+}
+
+.k-form {
+  .k-form-field {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.text-right {
+  text-align: center;
+  @media (max-width: 768px) {
+    margin-top: 23px;
+  }
+  .Button {
+    &:nth-of-type(1) {
+      margin-right: 100px;
+      @media (max-width: 768px) {
+        margin-right: 22px;
+      }
+    }
+  }
+}
+
+// =================  End Kendo Modal needed styles

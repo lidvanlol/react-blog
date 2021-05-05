@@ -1,0 +1,52 @@
+@import "../styles/colors.scss";
+
+.Top {
+  display: flex;
+  flex-direction: column;
+  @media (min-width: 768px) {
+    margin-left: 255px;
+  }
+  @media (max-width: 768px) {
+    align-items: center;
+  }
+  .top_box {
+    height: 67px;
+    background-color: $gray-bg;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  .close-btn {
+    position: absolute;
+    top: 8px;
+    right: 17px;
+    @media (max-width: 768px) {
+      right: 5px;
+      top: 5px;
+    }
+  }
+  p {
+    padding-left: 39px;
+    margin: 0;
+    @media (max-width: 768px) {
+      padding: 0 8px;
+    }
+  }
+  span {
+    position: absolute;
+    top: 7px;
+    right: 14px;
+  }
+  button {
+    width: 167px;
+    line-height: 1;
+    line-height: 26px;
+    box-sizing: border-box;
+    background-color: $black-color;
+    color: $white-color;
+    margin: 17px 0 15px auto;
+    @media (max-width: 768px) {
+      margin-left: 0;
+    }
+  }
+}
